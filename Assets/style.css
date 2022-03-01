@@ -75,6 +75,7 @@
 
 /*#endregion*/
 
+/* CONCLUSA */
 /*#region Esercizio 6/7/8 */
 .ex-6-img,
 .ex-7-img,
@@ -90,7 +91,7 @@
 
 /* Esercizio 7 */
 .ex-7-img:hover {
-  animation: change 8s linear;
+  animation: change 8s ease;
 }
 
 @keyframes change {
@@ -111,21 +112,97 @@
   }
 }
 
+/* Esercizio 8 */
+.ex-8-img:hover {
+  animation: Es-8 15s ease;
+}
 
+@keyframes Es-8 {
+  0% {
+    filter: none;
+  }
+  25% {
+    filter: drop-shadow(12px 12px 15px purple);
+    border-radius: 0px;
+  }
+  50% {
+    filter: hue-rotate(90deg);
+    border-radius: 0px;
+  }
+  75% {
+    border-radius: 25px;
+    filter: hue-rotate(90deg);
+  }
+  100% {
+    border-radius: 0px;
+    filter: none;
+  }
+}
 
 /*#endregion*/
 
+/* CONCLUSA */
 /*#region Esercizio 9 */
 .ex-9-img {
   margin: 50px 100px;
   width: 400px;
 }
+.ex-9-img:hover {
+  animation: Es-9 10s ease;
+}
+@keyframes Es-9 {
+  0% {
+    filter: none;
+    border-radius: 0px;
+    width: 400px;
+  }
+  20% {
+    filter: drop-shadow(12px 12px 15px rgb(10, 202, 154));
+    border-radius: 0px;
+    width: 400px;
+  }
+  40% {
+    border-radius: 0px;
+    width: 400px;
+    filter: hue-rotate(90deg);
+  }
+  60% {
+    border-radius: 20px;
+    width: 400px;
+    filter: hue-rotate(90deg);
+  }
+  80% {
+    border-radius: 20px;
+    width: 600px;
+    filter: hue-rotate(90deg);
+  }
+  100% {
+    filter: none;
+    border-radius: 0px;
+    width: 400px;
+  }
+}
 /*#endregion*/
 
+/* CONCLUSA */
 /*#region Esercizio 10 */
 .ex-10-icon {
   font-size: 60px;
 }
+
+.ex-10-icon:hover {
+  animation: Es-10 500ms infinite ease;
+}
+
+@keyframes Es-10 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /*#endregion*/
 
 /*#region Esercizio 11 */
