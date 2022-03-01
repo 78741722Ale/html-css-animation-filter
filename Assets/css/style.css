@@ -1,4 +1,4 @@
-/* CONCLUSA */
+
 /*#region Esercizio 1 */
 .ex-1-square {
   width: 100px;
@@ -13,7 +13,6 @@
 
 /*#endregion*/
 
-/* CONCLUSA - Ma chiedi conferma su Premere o cliccare */
 /*#region Esercizio 2 */
 .ex-2-square {
   width: 100px;
@@ -27,7 +26,6 @@
 }
 /*#endregion*/
 
-/* CONCLUSA */
 /*#region Esercizio 3 */
 .ex-3-square {
   width: 100px;
@@ -40,7 +38,6 @@
 }
 /*#endregion*/
 
-/* CONCLUSA */
 /*#region Esercizio 4 */
 .ex-4-square {
   width: 100px;
@@ -53,7 +50,6 @@
 }
 /*#endregion*/
 
-/* CONCLUSA - Ma chiedi conferma su Premere o cliccare */
 /*#region Esercizio 5 */
 .ex-5-square {
   margin: 20px;
@@ -75,7 +71,6 @@
 
 /*#endregion*/
 
-/* CONCLUSA */
 /*#region Esercizio 6/7/8 */
 .ex-6-img,
 .ex-7-img,
@@ -141,7 +136,6 @@
 
 /*#endregion*/
 
-/* CONCLUSA */
 /*#region Esercizio 9 */
 .ex-9-img {
   margin: 50px 100px;
@@ -184,7 +178,6 @@
 }
 /*#endregion*/
 
-/* CONCLUSA */
 /*#region Esercizio 10 */
 .ex-10-icon {
   font-size: 60px;
@@ -204,26 +197,25 @@
 }
 /*#endregion*/
 
-/* CONCLUSA */
 /*#region Esercizio 11 */
 .ex-11-icon {
   font-size: 60px;
 }
-.ex-11-icon:hover {  
+.ex-11-icon:hover {
   animation: Es-11 1000ms /* infinite */ linear;
 }
 @keyframes Es-11 {
-   0% {
-      transform: rotate(0deg); 
-   }
-   50% {
-      transform: rotate(270deg); 
-   }
-   100% {
-      transform: rotate(0deg); 
-   }
+  0% {
+    transform: rotate(0deg);
+  }
+  /* Edit : Aggiornato a 75% poichè ho letto che deve tornare indietro velocemente */
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
-
 /*#endregion*/
 
 /*#region Esercizio 12/13 */
@@ -261,4 +253,123 @@
   width: 60px;
   height: 20px;
 }
+
+/* Esercizio 12 */
+
+.ex-12-button:hover .ex-12-top-white {
+  animation: MuoviEs-12a 5s infinite linear;
+}
+
+@keyframes MuoviEs-12a {
+  0% {
+    left: 10%;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 10%;
+  }
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+  animation: MuoviEs-12b 5s infinite linear;
+}
+
+@keyframes MuoviEs-12b {
+  0% {
+    right: 20%;
+  }
+  50% {
+    right: 60%;
+  }
+  100% {
+    right: 20%;
+  }
+}
+
+/* Esercizio 13 */
+
+.ex-13-button:hover,
+.ex-13-top-white {
+  animation: RuotaEs-13a 5s linear;
+}
+
+@keyframes RuotaEs-13a {
+  0% {
+    /* Condizione iniziale  */
+    top: -10px;
+    left: 10%;
+  }
+  20% {
+    top: -10px;
+    /* 30px è la metà della sua Width */
+    left: calc(100% - 30px);
+  }
+  40% {
+    /* 30px è la metà della sua Width */
+    left: calc(100% - 30px);
+    /* 10px è la metà della sua Height */
+    top: calc(100% - 10px);
+  }
+  60% {
+    /* Oltre ai 20px si vede ai bordi del container */
+    left: -20px;
+    top: calc(100% - 10px);
+  }
+  80% {
+    /* Oltre ai 20px si vede ai bordi del container */
+    left: -20px;
+    /* Ritorna alla condizione iniziale */
+    top: -10px;
+  }
+  100% {
+    /* Condizione Finale  */
+    top: -10px;
+    left: 10%;
+  }
+}
+
+.ex-13-button:hover,
+.ex-13-bottom-white {
+  animation: RuotaEs-13b 5s linear;
+}
+
+@keyframes RuotaEs-13b {
+  0% {
+    /* Condizione iniziale  */
+    bottom: -10px;
+    right: 20%;
+  }
+  20% {
+    /* Bottom sempre in condizione iniziale  */
+    bottom: -10px;
+    /* Si sposta verso SX */
+    right: calc(100% - 40px);
+  }
+  40% {
+    /* Rimane nella sua posizione  */
+    right: calc(100% - 40px);
+    /* Si alza verso top */
+    bottom: calc(100% - 10px);
+  }
+  60% {
+    /* Rimane nella sua condizione */
+    bottom: calc(100% - 10px);
+    /* Si sposta verso dx */
+    right: -20px;
+  }
+  80% {
+    /* Si riporta in basso */
+    bottom: -10px;
+    /* Bordo a DX rimane fermo */
+    right: -20px;
+  }
+  100% {
+    /* Condizione Finale  */
+    bottom: -10px;
+    right: 20%;
+  }
+}
+
 /*#endregion*/
